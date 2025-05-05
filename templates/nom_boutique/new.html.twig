@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New NomBoutique{% endblock %}
+
+{% block body %}
+    <h1>Create new NomBoutique</h1>
+
+    {{ include('nom_boutique/_form.html.twig') }}
+
+    <a href="{{ path('app_nom_boutique_index') }}">back to list</a>
+{% endblock %}

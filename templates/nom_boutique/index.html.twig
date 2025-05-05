@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}NomBoutique index{% endblock %}
+
+{% block body %}
+    <h1>NomBoutique index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomboutique</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for nom_boutique in nom_boutiques %}
+            <tr>
+                <td>{{ nom_boutique.id }}</td>
+                <td>{{ nom_boutique.nomboutique }}</td>
+                    <td>{% for image in nom_boutique.imageBs |slice(0,1) %}
+                                            
+                    <img src="{{ asset('/uploads/'~image.nameb) }}" alt="IMG-INTRO" width="70px" height="90px"></td>
+                                        
+                    {% endfor %}</td>
+                <td>
+                    <a href="{{ path('app_nom_boutique_show', {'id': nom_boutique.id}) }}">show</a>
+                    <a href="{{ path('app_nom_boutique_edit', {'id': nom_boutique.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_nom_boutique_new') }}">Create new</a>
+{% endblock %}
