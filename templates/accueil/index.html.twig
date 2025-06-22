@@ -3,18 +3,96 @@
 {% block title %}Hello AccueilController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/lenovo/Documents/Projets symfony/ababacarecommerce/src/Controller/AccueilController.php</code></li>
-        <li>Your template at <code>C:/Users/lenovo/Documents/Projets symfony/ababacarecommerce/templates/accueil/index.html.twig</code></li>
-    </ul>
-</div>
+<div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab_one">
+                                <div class="feature-category-carousel-wrapper">
+                                    <div class="container">
+                                        <div class="featured-carousel-active2 row arrow-space slick-arrow-style" data-row="2">
+                                            <!-- product single item start -->
+                                            {% for produit in produits %}
+                                            <div class="col">
+                                                <div class="product-item fix mb-30">
+                                                    <div class="product-thumb">
+                                                        <a href="{{ produit.id }}">
+                                                            {% for image in produit.imagePs |slice(0,1) %}
+                                                            <img src="{{ asset('/uploads/'~image.namep) }}" class="img-pri" alt="">
+                                                            <img src="{{ asset('/uploads/'~image.namep) }}" class="img-sec" alt="">
+                                                            {% endfor %}
+                                                        </a>
+                                                        {# <div class="product-label">
+                                                            <span>hot</span>
+                                                        </div> #}
+                                                        {# <div class="product-action-link">
+                                                            <a href="#" data-toggle="modal" data-target="#quick_view"> <span data-toggle="tooltip" data-placement="left" title="Quick view"><i class="fa fa-search"></i></span> </a>
+                                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i class="fa fa-heart-o"></i></a>
+                                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i class="fa fa-refresh"></i></a>
+                                                            <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fa fa-shopping-cart"></i></a>
+                                                        </div> #}
+                                                    </div>
+                                                    <div class="product-content">
+                                                        <h4><a href="">{{ produit.nom }}</a></h4>
+                                                        <div class="pricebox">
+                                                            <span class="regular-price">{{ produit.prix }} FCFA</span>
+                                                            {# <div class="ratings">
+                                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                                <span class="good"><i class="fa fa-star"></i></span>
+                                                                <span><i class="fa fa-star"></i></span>
+                                                                <div class="pro-review">
+                                                                    <span>1 review(s)</span>
+                                                                </div>
+                                                            </div> #}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {% else %}
+            
+                no records found
+            
+        {% endfor %}
+                                            <!-- product single item end -->
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+{# <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prix</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for produit in produits %}
+            <tr>
+                <td>{{ produit.id }}</td>
+                <td>{{ produit.nom }}</td>
+                <td>{{ produit.prix }}</td>
+                    <td>{% for image in produit.imagePs |slice(0,1) %}
+                                            
+                    <img src="{{ asset('/uploads/'~image.namep) }}" alt="IMG-INTRO" width="70px" height="90px"></td>
+                                        
+                    {% endfor %}</td>
+                <td>
+                    <a href="{{ path('app_produit_show', {'id': produit.id}) }}">show</a>
+                    <a href="{{ path('app_produit_edit', {'id': produit.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table> #}
 {% endblock %}
