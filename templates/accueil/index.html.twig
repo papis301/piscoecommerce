@@ -14,10 +14,10 @@
                                             <div class="col">
                                                 <div class="product-item fix mb-30">
                                                     <div class="product-thumb">
-                                                        <a href="{{ produit.id }}">
+                                                        <a href="{{ path('app_produit_show', {'id': produit.id}) }}">
                                                             {% for image in produit.imagePs |slice(0,1) %}
-                                                            <img src="{{ asset('/uploads/'~image.namep) }}" class="img-pri" alt="">
-                                                            <img src="{{ asset('/uploads/'~image.namep) }}" class="img-sec" alt="">
+                                                            <img src="{{ asset('/uploads/'~image.namep) }}" width="70px" height="90px" class="img-pri" alt="">
+                                                            <img src="{{ asset('/uploads/'~image.namep) }}" width="70px" height="90px" class="img-sec" alt="">
                                                             {% endfor %}
                                                         </a>
                                                         {# <div class="product-label">
