@@ -94,7 +94,8 @@
                                     {% for image in produit.imagePs %}
                                         <div class="pro-large-img">
                                             {# <img src="assets/img/product/product-details-img1.jpg" alt="" /> #}
-                                            <img src="{{ asset('/uploads/'~image.namep) }}"  class="img-sec" alt="">
+                                            <img src="{{ asset('/uploads/'~image.namep) }}"  class="img-sec" alt="" width="700px" height="200px">
+                                            {# <img src="{{ asset('/uploads/'~image.namep) }}" width="70px" height="90px" class="img-pri" alt=""> #}
                                         </div>
                                     {% endfor %}     
                                         {# <div class="pro-large-img">
