@@ -220,14 +220,14 @@
                                 <div class="main-menu menu-style-4">
                                     <nav id="mobile-menu">
                                         <ul>
-                                            <li class="active"><a href="#"><i class="fa fa-home"></i>Home <i class="fa fa-angle-down"></i></a>
+                                            {# <li class="active"><a href="{{ path('app_accueil') }}"><i class="fa fa-home"></i>Accueil <i class="fa fa-angle-down"></i></a>
                                                 <ul class="dropdown">
-                                                    <li><a href="">Home version 01</a></li>
-                                                    {# <li><a href="index-2.html">Home version 02</a></li>
+                                                    <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                                                    <li><a href="index-2.html">Home version 02</a></li>
                                                     <li><a href="index-3.html">Home version 03</a></li>
-                                                    <li><a href="index-4.html">Home version 04</a></li> #}
+                                                    <li><a href="index-4.html">Home version 04</a></li>
                                                 </ul>
-                                            </li>
+                                            </li> #}
                                             {# <li class="static"><a href="#">pages <i class="fa fa-angle-down"></i></a>
                                                 <ul class="megamenu dropdown">
                                                     <li class="mega-title"><a href="#">column 01</a>
@@ -311,7 +311,8 @@
                                                     <li><a href="blog-details-image.html">blog details image</a></li>
                                                 </ul>
                                             </li> #}
-                                            <li><a href="">Contact us</a></li>
+                                            <li><a href="{{ path('app_accueil') }}">Accueil</a></li>
+                                            {# <li><a href="">Contact us</a></li> #}
                                         </ul>
                                     </nav>
                                 </div>
