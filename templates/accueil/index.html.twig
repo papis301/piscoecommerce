@@ -10,7 +10,7 @@
                                     <div class="container">
                                         <div class="featured-carousel-active2 row arrow-space slick-arrow-style" data-row="2">
                                             <!-- product single item start -->
-                                            {% for produit in produits %}
+                                            {# {% for produit in produits %}
                                             <div class="col">
                                                 <div class="product-item fix mb-30">
                                                     <div class="product-thumb">
@@ -20,21 +20,21 @@
                                                             <img src="{{ asset('/uploads/'~image.namep) }}" width="70px" height="90px" class="img-sec" alt="">
                                                             {% endfor %}
                                                         </a>
-                                                        {# <div class="product-label">
+                                                        <div class="product-label">
                                                             <span>hot</span>
-                                                        </div> #}
-                                                        {# <div class="product-action-link">
+                                                        </div> 
+                                                         <div class="product-action-link">
                                                             <a href="#" data-toggle="modal" data-target="#quick_view"> <span data-toggle="tooltip" data-placement="left" title="Quick view"><i class="fa fa-search"></i></span> </a>
                                                             <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i class="fa fa-heart-o"></i></a>
                                                             <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i class="fa fa-refresh"></i></a>
                                                             <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fa fa-shopping-cart"></i></a>
-                                                        </div> #}
+                                                        </div>
                                                     </div>
                                                     <div class="product-content">
                                                         <h4><a href="">{{ produit.nom }}</a></h4>
                                                         <div class="pricebox">
                                                             <span class="regular-price">{{ produit.prix }} FCFA</span>
-                                                            {# <div class="ratings">
+                                                            <div class="ratings">
                                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                                 <span class="good"><i class="fa fa-star"></i></span>
@@ -43,7 +43,7 @@
                                                                 <div class="pro-review">
                                                                     <span>1 review(s)</span>
                                                                 </div>
-                                                            </div> #}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -52,7 +52,7 @@
             
                 no records found
             
-        {% endfor %}
+        {% endfor %} #}
                                             <!-- product single item end -->
                                             </div>
 
@@ -71,9 +71,9 @@
                                                             <img src="{{ asset('/uploads/'~image.namep) }}" width="70px" height="90px" class="img-sec" alt="">
                                                 {% endfor %}
                                             </a>
-                                            <div class="product-label">
+                                            {# <div class="product-label">
                                                 <span>hot</span>
-                                            </div>
+                                            </div> #}
                                             {# <div class="product-action-link">
                                                 <a href="#" data-toggle="modal" data-target="#quick_view"> <span data-toggle="tooltip" data-placement="left" title="Quick view"><i class="fa fa-search"></i></span> </a>
                                                 <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i class="fa fa-heart-o"></i></a>
