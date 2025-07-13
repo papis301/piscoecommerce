@@ -1390,7 +1390,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     width: 50px;
     line-height: 45px;
     text-align: center;
-    background-color: #b8242a;
+    background-color: #007bff;
 }
 
 .main-header-inner .category-toggle-wrap .category-toggle .cat-icon i {
@@ -4060,7 +4060,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
     text-align: center;
     line-height: 36px;
     float: right;
-    background-color: #a32025;
+    background-color: #007bff;
 }
 
 /*------- product list item end -------*/
@@ -4835,11 +4835,11 @@ only screen and (max-width: 767px) {
     text-align: center;
     line-height: 40px;
     float: right;
-    background-color: #b8242a;
+    background-color: #007bff;
 }
 
 .product-details-des .action_link a.buy-btn:hover i {
-    background-color: #a32025;
+    background-color: #007bff;
 }
 
 .product-details-des p {
@@ -7102,7 +7102,7 @@ only screen and (min-width: 768px) and (max-width: 991px) {
 }
 
 .footer-top-wrapper .newsletter__wrap .newsletter__box form button:hover {
-    background-color: #a32025;
+    background-color: #007bff;
 }
 
 @media only screen and (max-width: 479px) {

@@ -74,18 +74,18 @@
                                             <div class="product-label">
                                                 <span>hot</span>
                                             </div>
-                                            <div class="product-action-link">
+                                            {# <div class="product-action-link">
                                                 <a href="#" data-toggle="modal" data-target="#quick_view"> <span data-toggle="tooltip" data-placement="left" title="Quick view"><i class="fa fa-search"></i></span> </a>
                                                 <a href="#" data-toggle="tooltip" data-placement="left" title="Wishlist"><i class="fa fa-heart-o"></i></a>
                                                 <a href="#" data-toggle="tooltip" data-placement="left" title="Compare"><i class="fa fa-refresh"></i></a>
                                                 <a href="#" data-toggle="tooltip" data-placement="left" title="Add to cart"><i class="fa fa-shopping-cart"></i></a>
-                                            </div>
+                                            </div> #}
                                         </div>
                                         <div class="product-content">
                                             <h4><a href="{{ path('app_produit_show', {'id': produit.id}) }}">vertual product 01</a></h4>
                                             <div class="pricebox">
-                                                <span class="regular-price">$70.00</span>
-                                                <div class="ratings">
+                                                <span class="regular-price">{{ produit.prix }} FCFA</span>
+                                                {# <div class="ratings">
                                                     <span class="good"><i class="fa fa-star"></i></span>
                                                     <span class="good"><i class="fa fa-star"></i></span>
                                                     <span class="good"><i class="fa fa-star"></i></span>
@@ -94,7 +94,7 @@
                                                     <div class="pro-review">
                                                         <span>1 review(s)</span>
                                                     </div>
-                                                </div>
+                                                </div> #}
                                             </div>
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@
                                         </div>
                                         <div class="product-list-content">
                                             <h3><a href="{{ path('app_produit_show', {'id': produit.id}) }}">virtual product 02</a></h3>
-                                            <div class="ratings">
+                                            {# <div class="ratings">
                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                 <span class="good"><i class="fa fa-star"></i></span>
                                                 <span class="good"><i class="fa fa-star"></i></span>
@@ -122,10 +122,10 @@
                                                 <div class="pro-review">
                                                     <span>1 review(s)</span>
                                                 </div>
-                                            </div>
+                                            </div> #}
                                             <div class="pricebox">
                                                 <span class="regular-price">$70.00</span>
-                                                <span class="old-price"><del>$90.00</del></span>
+                                                {# <span class="old-price"><del>$90.00</del></span> #}
                                             </div>
                                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                             <p>Phasellus id nisi quis justo tempus mollis sed et dui. In hac habitasse platea dictumst. Suspendisse ultrices mauris diam. Nullam sed aliquet elit. Mauris consequat nisi ut mauris efficitur lacinia.</p>
