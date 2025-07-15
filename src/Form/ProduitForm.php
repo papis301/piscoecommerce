@@ -14,6 +14,10 @@ class ProduitForm extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('categorie', null, [
+                'choice_label' => 'nom_categorie',
+                'label' => 'Catégorie'
+            ])
             ->add('nom')
             ->add('prix')
             ->add('imagep', FileType::class,[
